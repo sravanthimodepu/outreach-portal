@@ -3,37 +3,24 @@
 ** Usr_Tbl :
 
 
-|---------------+--------------------------------------------------------|
-| UsrId         | PK, NUMERIC                                            |
-|---------------+--------------------------------------------------------|
-| UsrTitle      | NOT NULL, VARCHAR                                      |
-|---------------+--------------------------------------------------------|
-| UsrFirstName  | NOT NULL, VARCHAR                                      |
-|---------------+--------------------------------------------------------|
-| UsrLastName   | NOT NULL, VARCHAR                                      |
-|---------------+--------------------------------------------------------|
-| UsrEmailId    | NOT NULL, VARCHAR,UNIQUE                               |
-|---------------+--------------------------------------------------------|
-| UsrAltEmailId | NULL, VARCHAR                                          |
-|---------------+--------------------------------------------------------|
-| UsrTelNo      | NOT NULL,NUMERIC                                       |
-|---------------+--------------------------------------------------------|
-| UsrAltTelNo   | NULL,NUMERIC                                           |
-|---------------+--------------------------------------------------------|
-| UsrInst_Id    | NOT NULL,NUMERIC                                       |
-|---------------+--------------------------------------------------------|
-| UsrMgrId      | NULL (Self mapping..Emp/Mgr relationship),NUMERIC      |
-|---------------+--------------------------------------------------------|
-| UsrStatus     | NOT NULL,CHAR,A/I (Default - A)                        |
-|---------------+--------------------------------------------------------|
-| CreaDt        | NOT NULL,DATETIME,SystemGenerated(DDMMYY HH24:MI:SS)   |
-|---------------+--------------------------------------------------------|
-| ModiDt        | NOT NULL,DATETIME,SystemGenerated(DDMMYY HH24:MI:SS)d; |
-|---------------+--------------------------------------------------------|
 
-- Sample record
-1;Dr.;Venkatesh;Choppella;Venkatesh@vlabs.ac.in;Venkatesh.Choppella@iiit.ac.in;9012345678;8012345679;123,NULL,A,310516
-13:21:12;310516 13:21:12
+| UsrId         | PK, NUMERIC                                            |
+| UsrTitle      | NOT NULL, VARCHAR                                      |
+| UsrFirstName  | NOT NULL, VARCHAR                                      |
+| UsrLastName   | NOT NULL, VARCHAR                                      |
+| UsrEmailId    | NOT NULL, VARCHAR,UNIQUE                               |
+| UsrAltEmailId | NULL, VARCHAR                                          |
+| UsrTelNo      | NOT NULL,NUMERIC                                       |
+| UsrAltTelNo   | NULL,NUMERIC                                           |
+| UsrInst_Id    | NOT NULL,NUMERIC                                       |
+| UsrMgrId      | NULL (Self mapping..Emp/Mgr relationship),NUMERIC      |
+| UsrStatus     | NOT NULL,CHAR,A/I (Default - A)                        |
+| CreaDt        | NOT NULL,DATETIME,SystemGenerated(DDMMYY HH24:MI:SS)   |
+| ModiDt        | NOT NULL,DATETIME,SystemGenerated(DDMMYY HH24:MI:SS)d; |
+
+- Sample recordq
+  1;Dr.;Venkatesh;Choppella;Venkatesh@vlabs.ac.in;Venkatesh.Choppella@iiit.ac.in;9012345678;8012345679;123,NULL,A,310516
+  13:21:12;310516 13:21:12
 
 ** UsrRoles:
                                                                    
@@ -366,8 +353,10 @@
 | ModiDt           | NOT NULL,DATETIME,SystemGenerated(DDMMYY HH24:MI:SS) |
 |------------------+------------------------------------------------------|
 
-- Sample record
-  1;1;2;3;slmohan@yahoo.com;'made theory to understand better';'can be more intutive';4;'1.2.3.4';'/InstId/Date/abc.pdf';310516 13:21:12;310516 13:21:12
+- Sample record 1;1;2;3;slmohan@yahoo.com;'made theory to understand
+  better';'can be more
+  intutive';4;'1.2.3.4';'/InstId/Date/abc.pdf';310516 13:21:12;310516
+  13:21:12
 
 ** Audit_Tbl
 
@@ -392,14 +381,19 @@
 
 
 - Sample record
-  1;USER_TBL;2;3;I;'1~Dr.~Venkatesh~Choppella~Venkatesh@vlabs.ac.in~V.Choppella@iiit.ac.in~9012345678~8012345679~123,NULL,A,310516 13:21:12~310516 13:21:12';310516 13:21:12;310516 13:21:12
+  1;USER_TBL;2;3;I;'1~Dr.~Venkatesh~Choppella~Venkatesh@vlabs.ac.in~V.Choppella@iiit.ac.in~9012345678~8012345679~123,NULL,A,310516
+  13:21:12~310516 13:21:12';310516 13:21:12;310516 13:21:12
 
 ** TradeOffs :
-All data in the database should be saved as entered. However, for Dup check - please compare on application side - converting all entered data to lower case
-Are not incorporating auto assignment of approvals in case there are not available/handled/responded to the approval queue for x days
-No screen for managing privileges
+All data in the database should be saved as entered. However, for Dup
+check - please compare on application side - converting all entered
+data to lower case Are not incorporating auto assignment of approvals
+in case there are not available/handled/responded to the approval
+queue for x days No screen for managing privileges
 
-Workshop is removed from Target. As the usage could happen through workshops, web, push/pull,etc
-The target set PI(Prof Ranjan or Sanjeet for Prof Ranjan) for all institutes as Principal Outreach Coordinator is not part of the scope
+Workshop is removed from Target. As the usage could happen through
+workshops, web, push/pull,etc The target set PI(Prof Ranjan or Sanjeet
+for Prof Ranjan) for all institutes as Principal Outreach Coordinator
+is not part of the scope
 
 We are not capturing the "remarks" for every change
