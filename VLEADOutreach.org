@@ -32,8 +32,9 @@
 |---------------+--------------------------------------------------------|
 
 - Sample record
-1;Dr.;Venkatesh;Choppella;Venkatesh@vlabs.ac.in;Venkatesh.Choppella@iiit.ac.in;9012345678;8012345679;123,NULL,A,310516
-13:21:12;310516 13:21:12
+  1;Dr.;Venkatesh;Choppella;Venkatesh@vlabs.ac.in;Venkatesh.Choppella@iiit.ac.in;
+  9012345678;8012345679;123,NULL,A,310516
+  13:21:12;310516 13:21:12
 
 ** UsrRoles:
                                                                    
